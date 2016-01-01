@@ -25,7 +25,7 @@ before_script:
         if (!(x %in% rownames(installed.packages()))) {
           install.packages(x, dependencies = TRUE)
         }})'
-  - Rscript 'if (!("shinyapps" %in% rownames(installed.packages()))) {
+  - Rscript -e 'if (!("shinyapps" %in% rownames(installed.packages()))) {
           devtools::install_github(repo = "rstudio/shinyapps", dependencies = TRUE)
         }'    
   - Rscript -e 'update.packages(ask = FALSE, instlib = "~/Rlib")'

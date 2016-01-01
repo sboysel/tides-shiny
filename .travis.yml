@@ -13,7 +13,6 @@ addons:
     packages:
     - r-base-dev
     - r-recommended
-    - pandoc
 cache:
   directories:
   - "~/Rlib"
@@ -27,10 +26,6 @@ install:
   - Rscript -e 'update.packages(ask = FALSE, instlib = "~/Rlib")'
   - Rscript -e 'devtools::install_github(repo = "rstudio/shinyapps", dependencies = TRUE)'
   - Rscript -e 'devtools::install_deps(pkg = ".", dependencies = TRUE)'
-script:
-  - R CMD build . --no-build-vignettes --no-manual
-  - PKG_FILE_NAME=$(ls -1t *.tar.gz | head -n 1)
-  - R CMD check "${PKG_FILE_NAME}" --no-build-vignettes --no-manual --as-cran
   - Rscript -e "shinyapps::setAccountInfo(name='sboysel',
                                           token='FC30770A1477096766683E51D133026C',
                                           secret=Sys.getenv('SHINYAPPS_SECRET'))"

@@ -1,5 +1,6 @@
 # Tides
 [![Travis](https://img.shields.io/travis/sboysel/tides-shiny.svg?style=flat-square)](https://github.com/sboysel/tides-shiny)
+[![Shinyapps](https://img.shields.io/badge/shinyapps-deployed-brightgreen.svg?style=flat-square)](https://sboysel.shinyapps.io/tides)
 
 A [Shiny](http://shiny.rstudio.com/) app to visualize tide predictions.
 

@@ -1,0 +1,11 @@
+Title: Tides
+Author: Sam Boysel
+DisplayMode: Showcase
+Type: Shiny
+Tags: tides-shiny
+Imports:
+  curl,
+  dplyr,
+  ggplot2,
+  jsonlite,
+  quantmod

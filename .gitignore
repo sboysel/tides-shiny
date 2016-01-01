@@ -1,0 +1,6 @@
+.Rprofile
+*.Rproj
+.Rproj.user
+.Rhistory
+.RData
+rsconnect/

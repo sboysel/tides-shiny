@@ -23,6 +23,7 @@ install:
   - echo '.travis.yml' > .Rbuildignore
   - Rscript -e 'if(!"devtools" %in% rownames(installed.packages())) { 
     install.packages("devtools", dependencies = TRUE) }'
+  - Rscript -e 'install.packages(c("httpuv", "shiny"), dependencies = TRUE)'
   - Rscript -e 'update.packages(ask = FALSE, instlib = "~/Rlib")'
   - Rscript -e 'devtools::install_github(repo = "rstudio/shinyapps", dependencies = TRUE)'
   - Rscript -e 'devtools::install_deps(pkg = ".", dependencies = TRUE)'
